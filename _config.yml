@@ -172,6 +172,7 @@ collections:
   tabs:
     output: true
     sort_by: order
+    folders: /icode/posts
 
 defaults:
   - scope:
