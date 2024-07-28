@@ -1,9 +1,9 @@
 ---
 title: Beaglebone - Setup environment for Linux kernel development
 author: vnguyentrong
-date: 2024-07-28
-categories: [Environment, Linux kernel development, Beaglebone]
-tags: [environment]
+date: 2024-07-28 05:24 PM +07
+categories: [environment]
+tags: [environment,linux-kernel,beaglebone]
 
 ---
 
