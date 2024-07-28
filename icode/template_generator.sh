@@ -13,9 +13,10 @@ POST_ASSET_DIR="${POST_DIR}/assets"
 
 ###################################### INTERNAL ######################################
 POST_INFO_START="---"
-POST_TITLE="title: input_your_title"
-POST_DES="description: >- input_your_description"
-POST_AUT="author: vnguyentrong"
+POST_TITLE="title: \"topic: input_your_title\""
+POST_DES="description: >-"
+POST_DES_CONTENT="  input_description"
+# POST_AUT="author: vnguyentrong"
 POST_TIME="date: ${date_post} ${time_post}"
 POST_CAT="categories: [input_post_categories]"
 POST_TAG="tags: [input_tags,,]"
@@ -33,7 +34,8 @@ decorate_post_template () {
     echo $POST_INFO_START >> $post_file
     echo $POST_TITLE >> $post_file
     echo $POST_DES >> $post_file
-    echo $POST_AUT >> $post_file
+    echo $POST_DES_CONTENT >> $post_file
+    # echo $POST_AUT >> $post_file
     echo $POST_TIME >> $post_file
     echo $POST_CAT >> $post_file
     echo $POST_TAG >> $post_file

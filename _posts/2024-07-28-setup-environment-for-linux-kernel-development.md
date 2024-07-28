@@ -1,7 +1,8 @@
 ---
-title: Beaglebone - Setup environment for Linux kernel development
-author: vnguyentrong
-date: 2024-07-28 05:24 PM +07
+title: "beaglebone: Setup environment for Linux kernel development"
+description: >-
+  One of the way to setup environment for Linux kernel developemnt with Beaglebone Black
+date: 2024-07-28 05:24:20 +0700
 categories: [environment]
 tags: [environment,linux-kernel,beaglebone]
 
@@ -21,9 +22,9 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
 
@@ -72,10 +73,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install.
 RUN \
-  apt-get update && \
-  apt-get install -y make pkg-config locales apt-utils && \
-  useradd -ms /bin/bash vinhnt && \
-  apt-get install sudo vim git cmake tree bash-completion -y
+    apt-get update && \
+    apt-get install -y make pkg-config locales apt-utils && \
+    useradd -ms /bin/bash vinhnt && \
+    apt-get install sudo vim git cmake tree bash-completion -y
 
 RUN echo "root:1" | chpasswd
 
@@ -92,10 +93,10 @@ RUN echo "alias gs='git status'" >> /home/vinhnt/.bashrc && \
 
 # install dependencies
 RUN \
-  apt-get update && \
-  apt-get install python3-pip -y && \
-  apt-get install gcc-arm-linux-gnueabihf flex bison bc libssl-dev -y && \
-  apt-get install kmod -y
+    apt-get update && \
+    apt-get install python3-pip -y && \
+    apt-get install gcc-arm-linux-gnueabihf flex bison bc libssl-dev -y && \
+    apt-get install kmod -y
 
 ```
 
