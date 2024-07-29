@@ -6,6 +6,7 @@ date: 2024-07-27 05:24:20 +0700
 categories: [website]
 tags: [website]
 post_assets: https://raw.githubusercontent.com/vnguyentrong/vnguyentrong.github.io/icode_master/_posts/assets/2024-07-27-create-template-post
+comments: true
 
 ---
 
