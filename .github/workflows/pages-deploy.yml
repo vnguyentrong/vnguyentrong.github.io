@@ -9,6 +9,8 @@ on:
       - README.md
       - LICENSE
   pull_request:
+    branches:
+      - icode_master
     types: [opened, synchronize, reopened, closed]
 
   # Allows you to run this workflow manually from the Actions tab
