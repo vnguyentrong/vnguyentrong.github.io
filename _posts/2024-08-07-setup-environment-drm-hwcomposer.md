@@ -19,16 +19,16 @@ Currently, merge request for drm-hwcomposer3 is available here
 
 ## Setup environment for development
 
+In the `drm-hwcomposer/.ci` folder, there is a Dockerfile, which is used to create a docker image with full setup for buiding drm-hwcomposer.
+This made the process for building drm-hwcomposer become more easier!
 
 ```bash
-
+# clone drm-hwcomposer source code
 git clone git@gitlab.freedesktop.org:vnguyentrong/drm-hwcomposer.git
 
 cd drm-hwcomposer
-
 # type make to see make options
 make
-
 # make with ci_fast
 make ci_fast
 
@@ -69,7 +69,7 @@ make shell
 find /home/user/aospless/install/* -type f
 
 ```
-output should be:
+The output should be:
 
 ```txt
 user@u22:~/drm_hwcomposer$ find /home/user/aospless/install/* -type f
